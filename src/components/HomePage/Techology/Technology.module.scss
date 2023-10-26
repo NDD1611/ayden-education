@@ -1,0 +1,26 @@
+@use "../../../styles/mixins/button" as *;
+
+.button {
+  @include make-button();
+}
+.item {
+  width: 136px;
+  height: 136px;
+  border-radius: 13.342px;
+  border: 2px solid var(--gray-gray-300-stroke-choose, #d0d5dd);
+  background: var(--White, #fff);
+  overflow: hidden;
+}
+.text {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -0.96px;
+}
+@media only screen and (max-width: 48em) {
+  .text {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0px;
+  }
+}

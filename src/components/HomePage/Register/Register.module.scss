@@ -1,0 +1,23 @@
+.text {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -0.96px;
+}
+.subText {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+@media only screen and (max-width: 48em) {
+  .text {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0px;
+  }
+  .subText {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+}

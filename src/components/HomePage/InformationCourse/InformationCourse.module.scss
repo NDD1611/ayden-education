@@ -1,0 +1,41 @@
+.boxContainer {
+  flex: 1;
+  height: 100%;
+  .boxList {
+    padding: 48px 32px;
+    border-radius: 16px;
+    border: 4px solid var(--gray-gray-100-shadow, #f2f4f7);
+    background: var(--gray-gray-100-shadow, #f2f4f7);
+  }
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.72px;
+  }
+}
+.hideMobile {
+  display: block;
+}
+.hideDesktop {
+  display: none;
+}
+@media only screen and (max-width: 48em) {
+  .hideMobile {
+    display: none;
+  }
+  .hideDesktop {
+    display: block;
+  }
+  .boxContainer {
+    .title {
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: -1.2px;
+    }
+    .boxList {
+      padding: 24px 16px;
+      border-radius: 16px;
+    }
+  }
+}

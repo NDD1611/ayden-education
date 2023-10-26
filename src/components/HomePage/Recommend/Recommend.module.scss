@@ -1,0 +1,59 @@
+@use "../../../styles/mixins/button" as *;
+
+.button {
+  @include make-button();
+}
+.cardContainer {
+  position: relative;
+  ::before {
+    content: "";
+    width: 825px;
+    height: 473px;
+    display: block;
+    background: url("/assets/images/recommend.png");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+}
+.card {
+  padding: 42px;
+  box-shadow: 51px 51px 84px 0px rgba(135, 140, 189, 0.06);
+  background: #fff;
+  .cardImg {
+    border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+}
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -0.96px;
+}
+.subText {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
+@media only screen and (max-width: 48em) {
+  .cardContainer {
+    position: relative;
+    ::before {
+      width: 0;
+    }
+  }
+  .subText {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .title {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0px;
+  }
+}

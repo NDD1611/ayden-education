@@ -1,0 +1,143 @@
+@use "../../../styles/mixins/button" as *;
+
+.buttonMore {
+  @include make-button-more();
+}
+
+.boxHeader {
+  display: flex;
+  padding: 20px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  border-radius: 4px;
+  background: var(--Xanh, #2339ff);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.tabContainer {
+  .tabLabel {
+    padding: 20px 48px;
+    color: var(--base-white, var(--White, #344054));
+    font-family: Space Grotesk;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+    text-transform: uppercase;
+
+    &[data-active] {
+      background: #2339ff;
+      color: #fff;
+    }
+  }
+
+  .root {
+    height: 170px;
+    display: flex;
+    align-items: center;
+  }
+
+  .indicator {
+    width: 20px;
+    height: 8px;
+    transition: width 250ms ease;
+    background: #2339ff;
+
+    &[data-active] {
+      width: 50px;
+    }
+  }
+
+  .control {
+    &[data-inactive] {
+      opacity: 0;
+      cursor: default;
+    }
+  }
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.72px;
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  margin: 10px 0;
+}
+
+.panelContainer {
+  padding: 48px 60px;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+  border-radius: 32px;
+  border: 4px solid var(--gray-gray-100-shadow, #f2f4f7);
+  background: var(--White, #fff);
+}
+
+@media only screen and (max-width: 48em) {
+  .tabContainer {
+    .tabLabel {
+      padding: 8px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+
+      &[data-active] {
+        background: #2339ff;
+        color: #fff;
+      }
+    }
+
+    .control {
+      display: none;
+    }
+
+    .root {
+      height: 100%;
+    }
+
+    .slide {
+      height: 100%;
+    }
+
+    .indicator {
+      display: none;
+    }
+  }
+
+  .subText {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -1.2px;
+  }
+
+  .panelContainer {
+    padding: 24px 24px;
+  }
+
+  .subText {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .buttonMore {
+    @include make-button-more();
+    font-size: 20px;
+  }
+}
