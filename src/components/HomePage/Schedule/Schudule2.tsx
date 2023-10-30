@@ -33,7 +33,7 @@ export const Schedule2 = () => {
     let data: phase[] = [
         {
             title: 'HTML-CSS',
-            image: 'https://cybersoft.edu.vn/wp-content/uploads/2022/08/html-css.jpg',
+            image: '/assets/schedules/html-css.jpg',
             descriptions: [
                 'UI-UX',
                 'HTML, CSS',
@@ -45,7 +45,7 @@ export const Schedule2 = () => {
             ]
         }, {
             title: 'HTML5-CSS3',
-            image: 'https://cybersoft.edu.vn/wp-content/uploads/2022/08/HTML5-CSS3.jpg',
+            image: '/assets/schedules/HTML5-CSS3.jpg',
             descriptions: [
                 'UI-UX',
                 'HTML, CSS',
@@ -57,7 +57,7 @@ export const Schedule2 = () => {
             ]
         }, {
             title: 'BOOTSTRAP',
-            image: 'https://cybersoft.edu.vn/wp-content/uploads/2022/08/bs.jpg',
+            image: '/assets/schedules/bs.jpg',
             descriptions: [
                 'UI-UX',
                 'HTML, CSS',
@@ -69,7 +69,7 @@ export const Schedule2 = () => {
             ]
         }, {
             title: 'CAPSTONE BOOTSTRAP',
-            image: 'https://cybersoft.edu.vn/wp-content/uploads/2022/08/capstoneBS.png',
+            image: '/assets/schedules/capstoneBS.png',
             descriptions: [
                 'UI-UX',
                 'HTML, CSS',
@@ -81,7 +81,7 @@ export const Schedule2 = () => {
             ]
         }, {
             title: 'GIT',
-            image: 'https://cybersoft.edu.vn/wp-content/uploads/2022/08/git.jpg',
+            image: '/assets/schedules/git.jpg',
             descriptions: [
                 'UI-UX',
                 'HTML, CSS',
@@ -93,7 +93,7 @@ export const Schedule2 = () => {
             ]
         }, {
             title: 'JS',
-            image: 'https://apicrm.cybersoft.edu.vn/images/JS.png',
+            image: '/assets/schedules/JS.png',
             descriptions: [
                 'UI-UX',
                 'HTML, CSS',
@@ -105,7 +105,7 @@ export const Schedule2 = () => {
             ]
         }, {
             title: 'SASS',
-            image: 'https://cybersoft.edu.vn/wp-content/uploads/2022/08/SASS.png',
+            image: '/assets/schedules/SASS.png',
             descriptions: [
                 'UI-UX',
                 'HTML, CSS',
@@ -117,7 +117,7 @@ export const Schedule2 = () => {
             ]
         }, {
             title: 'API',
-            image: 'https://cybersoft.edu.vn/wp-content/uploads/2022/07/decuong21.png',
+            image: '/assets/schedules/decuong21.png',
             descriptions: [
                 'UI-UX',
                 'HTML, CSS',
@@ -129,7 +129,7 @@ export const Schedule2 = () => {
             ]
         }, {
             title: 'CAPSTONE JS',
-            image: 'https://cybersoft.edu.vn/wp-content/uploads/2022/08/capstoneJS.jpg',
+            image: '/assets/schedules/capstoneJS.jpg',
             descriptions: [
                 'UI-UX',
                 'HTML, CSS',
@@ -141,7 +141,7 @@ export const Schedule2 = () => {
             ]
         }, {
             title: 'ES6',
-            image: 'https://cybersoft.edu.vn/wp-content/uploads/2022/07/decuong13.png',
+            image: '/assets/schedules/decuong13.png',
             descriptions: [
                 'UI-UX',
                 'HTML, CSS',
