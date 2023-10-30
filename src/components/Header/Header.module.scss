@@ -3,7 +3,8 @@
   top: 0;
   left: 0;
   right: 0;
-  background: #2339ff;
+  // background: #2339ff;        
+  background-image: linear-gradient(to right, #5cace8, #3586d1);
   z-index: 9;
 
   .button {
@@ -27,6 +28,7 @@
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
   }
 }
+
 // xs: '30em',
 // sm: '48em',
 // md: '64em',
@@ -35,13 +37,16 @@
 .hideMobile {
   display: block;
 }
+
 .hideDesktop {
   display: none;
 }
+
 @media only screen and (max-width: 48em) {
   .hideMobile {
     display: none;
   }
+
   .hideDesktop {
     display: block;
   }

@@ -1,0 +1,132 @@
+.indicator {
+    background-color: #5cace8;
+    width: 20px;
+    height: 10px;
+    transition: width 250ms ease;
+
+    &[data-active] {
+        width: 40px;
+        background-color: #3586d1;
+    }
+}
+
+.controls {
+    // display: none;
+    top: calc(50% - 65px);
+    width: 108%;
+    left: -4%;
+}
+
+.control {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(to right, #5cace8, #3586d1);
+
+    &[data-inactive] {
+        opacity: 0;
+        cursor: default;
+    }
+}
+
+.title {
+    background-image: linear-gradient(to right, #5cace8, #3586d1);
+}
+
+.scheduleTitle {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.image {
+    border-radius: 50%;
+    box-shadow: 0 0 5px 1px #ccc;
+}
+
+.roadmapTop {
+    height: 200px;
+}
+
+.slide0 {
+    .lineVertical {
+        height: calc(100% - 130px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .line {
+            height: 100%;
+            border-left: 1px solid #000;
+        }
+    }
+}
+
+.slide1 {
+    .lineVertical {
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .line {
+            height: 100%;
+            border-left: 1px solid #000;
+        }
+    }
+}
+
+.scheduleContainer {
+    position: relative;
+    padding: 5px;
+
+    .myControls {
+        position: absolute;
+        width: 103%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        left: -1.5%;
+        top: calc(50% - 16px);
+
+        // .controlLeft {
+        //     width: 50px;
+        //     height: 50px;
+        //     background-color: linear-gradient(to right, #5cace8, #3586d1);
+        // }
+    }
+
+}
+
+@media only screen and (max-width: 740px) {
+    .textItem {
+        font-size: 14px;
+    }
+
+    .indicator {
+        display: none;
+    }
+
+    .myControls {
+        display: none !important;
+    }
+
+    .slide1 {
+        .lineVertical {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .line {
+                height: 100%;
+                border-left: 1px solid #000;
+            }
+        }
+    }
+
+    .controls {
+        display: none;
+    }
+}

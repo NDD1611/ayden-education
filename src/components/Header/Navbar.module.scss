@@ -1,33 +1,41 @@
 .Navbar {
   gap: 32px;
   height: 96px;
+
   .text {
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: 30px;
     color: white;
+
     &:hover {
-      color: rgb(55, 189, 223);
+      // color: rgb(55, 189, 223);
+      color: #000;
     }
   }
+
   .button {
     height: 100%;
     display: flex;
     align-items: center;
   }
+
   .activeText {
     color: white;
     border-bottom: 2px solid #fff;
   }
 }
+
 @media only screen and (max-width: 48em) {
   .Navbar {
     flex-direction: column;
     height: 100%;
+
     .text {
       color: #2339ff;
     }
+
     .activeText {
       color: #2339ff;
       border-bottom: 2px solid #2339ff;
