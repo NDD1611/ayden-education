@@ -4,7 +4,6 @@ import { Container, Text, Box, rem, Flex } from '@mantine/core'
 import classes from './Schedule2.module.scss'
 import { IconArrowBadgeRightFilled } from '@tabler/icons-react';
 import Image from 'next/image';
-import { IconCaretLeft, IconCaretRight } from '@tabler/icons-react';
 import { useEffect, useState } from 'react';
 type phase = {
     title: string,
