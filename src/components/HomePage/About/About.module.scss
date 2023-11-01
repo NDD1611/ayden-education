@@ -1,3 +1,5 @@
+@import '../../../globals.scss';
+
 .aboutContainer {
   // background-color: #343754;
   padding: 50px 0;
@@ -7,6 +9,96 @@
     // color: #fff;
     .middle {
       display: flex;
+
+      .left {
+        width: 50%;
+
+        .leftTitle {
+          font-size: 24px;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+
+        .leftDescription {
+          font-size: 16px;
+        }
+      }
+
+      .right {
+        width: 50%;
+
+
+        .slideImage {
+          max-width: 100%;
+          height: 200px;
+          margin: 0 auto;
+          position: relative;
+          overflow: hidden;
+          transform: translate3d(0, 0, 0);
+
+          &::before {
+            background: linear-gradient(270deg, hsla(0deg, 0%, 100%, 0), #fff 70%);
+            content: "";
+            height: 100%;
+            width: 300px;
+            left: -60px;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+          }
+
+          &::after {
+            background: linear-gradient(90deg, hsla(0deg, 0%, 100%, 0), #fff 65%);
+            content: "";
+            height: 100%;
+            width: 356px;
+            right: -137px;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+          }
+
+          .moverX {
+            height: 200px;
+            width: 4296px;
+            background: url("/assets/abouts/logoIcon-2-1.png");
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            transform: translate3d(0, 0, 0);
+            animation: moveSlideshowX 60s linear infinite;
+          }
+        }
+      }
+    }
+
+    .foot {
+      margin-top: 20px;
+      border-radius: 15px 0 15px 0;
+      overflow: hidden;
+      box-shadow: 0px 0px 8px -2px #ccc;
+
+      .item {
+        width: 33.33%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .mainText {
+          font-weight: 600;
+          font-size: 36px;
+          background: $mainRadientToRight;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .subText {
+          font-size: 20px;
+        }
+      }
     }
 
     .headTitle {
@@ -16,70 +108,8 @@
       padding: 20px 0;
     }
 
-    .left {
-      width: 50%;
-
-      .leftTitle {
-        font-size: 24px;
-        text-align: center;
-        margin-bottom: 10px;
-      }
-
-      .leftDescription {
-        font-size: 16px;
-      }
-    }
-
-    .right {
-      width: 50%;
 
 
-      .slideImage {
-        max-width: 100%;
-        height: 200px;
-        margin: 0 auto;
-        position: relative;
-        overflow: hidden;
-        transform: translate3d(0, 0, 0);
-
-        &::before {
-          background: linear-gradient(270deg, hsla(0deg, 0%, 100%, 0), #fff 70%);
-          content: "";
-          height: 100%;
-          width: 300px;
-          left: -60px;
-          position: absolute;
-          top: 0;
-          z-index: 1;
-        }
-
-        &::after {
-          background: linear-gradient(90deg, hsla(0deg, 0%, 100%, 0), #fff 65%);
-          content: "";
-          height: 100%;
-          width: 356px;
-          right: -137px;
-          position: absolute;
-          top: 0;
-          z-index: 1;
-        }
-
-        .moverX {
-          height: 200px;
-          width: 4296px;
-          // background: url("https://cybersoft.edu.vn/wp-content/uploads/2022/11/logoIcon-2-1.png");
-          background: url("/assets/abouts/logoIcon-2-1.png");
-          background-size: contain;
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          transform: translate3d(0, 0, 0);
-
-          animation: moveSlideshowX 60s linear infinite;
-        }
-      }
-    }
   }
 }
 
@@ -113,6 +143,8 @@
           width: 100%;
         }
       }
+
+
     }
   }
 }

@@ -1,7 +1,7 @@
 
-import { Container, Accordion, rem, Text, Flex, List, ThemeIcon, Button, Spoiler } from '@mantine/core'
+import { Container, Accordion, rem, Text, Flex, List, ThemeIcon, Box, Button } from '@mantine/core'
 import { IconCircleCheck, IconChevronsDown, IconChevronsUp } from '@tabler/icons-react';
-import React, { useRef } from 'react'
+import React, { useEffect } from 'react'
 import { useMemo } from 'react'
 import { useLingui } from "@lingui/react";
 import classes from './Summary2.module.scss'
@@ -16,6 +16,7 @@ type phase = {
 }
 
 
+let showSpoiler = false
 export const Summary2: React.FC = () => {
     const { i18n } = useLingui();
     let datas: phase[] = useMemo(
@@ -411,8 +412,49 @@ export const Summary2: React.FC = () => {
             </Accordion.Item>
         )
     })
+    const handleShowSpoiler = () => {
+        showSpoiler = true
+        let spoiler = document.getElementById('spoiler')
+        let hideBtn = document.getElementById('hideBtn')
+        let showBtn = document.getElementById('showBtn')
+        if (spoiler && showBtn && hideBtn) {
+            spoiler.style.height = spoiler.scrollHeight + 'px'
+            showBtn.style.display = 'none'
+            hideBtn.style.display = 'block'
+        }
+    }
+    const handleHideSpoiler = () => {
+        showSpoiler = false
+        let spoiler = document.getElementById('spoiler')
+        let hideBtn = document.getElementById('hideBtn')
+        let showBtn = document.getElementById('showBtn')
+        if (spoiler && showBtn && hideBtn) {
+            spoiler.style.height = 250 + 'px'
+            showBtn.style.display = 'block'
+            hideBtn.style.display = 'none'
+        }
+    }
+    const handleChangeAccordion = () => {
+        setTimeout(() => {
+            let spoiler = document.getElementById('spoiler')
+            let Accordion = document.getElementById('Accordion')
+            if (spoiler && Accordion && showSpoiler) {
+                spoiler.style.height = Accordion.clientHeight + 'px'
+            }
+        }, 400)
+    }
 
-    const spoilerControlRef = useRef<HTMLButtonElement>(null);
+    useEffect(() => {
+        let hideBtn = document.getElementById('hideBtn')
+        let showBtn = document.getElementById('showBtn')
+        if (showSpoiler == true && showBtn && hideBtn) {
+            showBtn.style.display = 'none'
+            hideBtn.style.display = 'block'
+        } else if (showSpoiler == false && showBtn && hideBtn) {
+            showBtn.style.display = 'block'
+            hideBtn.style.display = 'none'
+        }
+    }, [])
     return <>
         <Container
             size={'lg'}
@@ -422,42 +464,43 @@ export const Summary2: React.FC = () => {
             >
                 ĐỀ CƯƠNG CHI TIẾT
             </Text>
-
-            <Spoiler maxHeight={250}
-                classNames={classes}
-                showLabel={
-                    <Container className={classes.viewMore}>
-                        <Button
-                            ref={spoilerControlRef}
-                            className={classes.viewMoreButton}
-                            variant="light"
-                            rightSection={<IconChevronsDown size={14} />}
-                        >
-                            Xem thêm
-                        </Button>
-                    </Container>
-                }
-                hideLabel={
-                    <Container className={classes.viewMore}>
-                        <Button
-                            ref={spoilerControlRef}
-                            className={classes.viewMoreButton}
-                            variant="light"
-                            rightSection={<IconChevronsUp size={14} />}
-                        >
-                            Ẩn bớt
-                        </Button>
-                    </Container>
-                }
-                transitionDuration={1000}
+            <Box
+                component='div'
+                id='spoiler'
+                className={classes.mySpoiler}
             >
                 <Accordion
+                    id='Accordion'
+                    onChange={handleChangeAccordion}
                     variant="contained"
-                    transitionDuration={1000}
+                    transitionDuration={300}
                 >
                     {accordionItems}
                 </Accordion>
-            </Spoiler>
-        </Container>
+            </Box>
+            <Flex
+                pt={20}
+                justify={'center'}
+            >
+                <Button
+                    id='showBtn'
+                    onClick={handleShowSpoiler}
+                    className={classes.viewMoreButton}
+                    // variant="light"
+                    rightSection={<IconChevronsDown size={14} />}
+                >
+                    Xem thêm
+                </Button>
+                <Button
+                    id='hideBtn'
+                    onClick={handleHideSpoiler}
+                    className={classes.viewMoreButton}
+                    // variant="light"
+                    rightSection={<IconChevronsUp size={14} />}
+                >
+                    Ẩn bớt
+                </Button>
+            </Flex>
+        </Container >
     </>
 }

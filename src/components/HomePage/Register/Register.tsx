@@ -6,12 +6,12 @@ import {
   Grid,
   rem,
   Text,
-  TextInput, Group, NumberInput, Textarea
+  TextInput, Group, Textarea
 } from "@mantine/core";
 import Image from "next/image";
 import { useLingui } from "@lingui/react";
 import classes from "./Register.module.scss";
-import { useForm, isNotEmpty, isEmail, isInRange, hasLength, matches } from '@mantine/form';
+import { useForm, isEmail, hasLength, matches } from '@mantine/form';
 export const Register: React.FC = () => {
   const { i18n } = useLingui();
   const form = useForm({

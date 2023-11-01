@@ -8,6 +8,12 @@
     margin-top: 30px;
 }
 
+.mySpoiler {
+    height: 250px;
+    overflow-y: hidden;
+    transition: height 1s linear;
+}
+
 .sectionIcon {
     padding: 5px 10px;
     color: #fff;
@@ -46,16 +52,9 @@
     }
 }
 
-.viewMore {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10px;
-
-    .viewMoreButton {
-        background-image: $mainRadientToRight;
-        color: #fff;
-    }
+.viewMoreButton {
+    background-image: $mainRadientToRight;
+    color: #fff;
 }
 
 .imageContainer {
@@ -77,7 +76,7 @@
 .accordionHide {
     height: 250px;
     overflow-y: hidden;
-    transition: height linear 1s;
+    transition: height linear 0.5s;
 }
 
 .accordionShow {

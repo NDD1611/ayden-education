@@ -35,6 +35,27 @@ export const About: React.FC = () => {
           </Box>
         </Box>
       </Flex>
+      <Flex className={classes.foot}
+        gap={20}
+      >
+        <Box component="div" className={classes.item}>
+          <Text className={classes.mainText}>200+</Text>
+          <Text className={classes.subText}>đối tác</Text>
+        </Box>
+        <Box component="div" className={classes.item}
+          style={{
+            borderLeft: '1px solid #ccc',
+            borderRight: '1px solid #ccc'
+          }}
+        >
+          <Text className={classes.mainText}>9500+</Text>
+          <Text className={classes.subText}>Học viên</Text>
+        </Box>
+        <Box component="div" className={classes.item}>
+          <Text className={classes.mainText}>92%</Text>
+          <Text className={classes.subText}>Có việc làm sau khóa học</Text>
+        </Box>
+      </Flex>
     </Container>
   </Container>
 };
