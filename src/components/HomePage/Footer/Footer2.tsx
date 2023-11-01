@@ -1,4 +1,4 @@
-import { Container, Divider, Flex, SimpleGrid, Text, rem } from "@mantine/core";
+import { Container, Flex, Text, rem } from "@mantine/core";
 import Image from "next/image";
 import classes from "./Footer2.module.scss";
 import Link from 'next/link'
