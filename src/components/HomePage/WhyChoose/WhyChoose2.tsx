@@ -120,6 +120,7 @@ export const WhyChoose2: React.FC = () => {
         caculatorSizeItem()
         window.addEventListener('resize', setPositionForItem)
         window.addEventListener('resize', caculatorSizeItem)
+        setSpace(20)
         return () => {
             window.removeEventListener('resize', setPositionForItem)
             window.removeEventListener('resize', caculatorSizeItem)
