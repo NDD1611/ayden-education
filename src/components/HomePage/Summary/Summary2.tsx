@@ -1,7 +1,7 @@
 
 import { Container, Accordion, rem, Text, Flex, List, ThemeIcon, Button, Spoiler } from '@mantine/core'
 import { IconCircleCheck, IconChevronsDown, IconChevronsUp } from '@tabler/icons-react';
-import React, { useState, useRef } from 'react'
+import React, { useRef } from 'react'
 import { useMemo } from 'react'
 import { useLingui } from "@lingui/react";
 import classes from './Summary2.module.scss'
@@ -412,7 +412,6 @@ export const Summary2: React.FC = () => {
         )
     })
 
-    const [showAccordion, setShowAccordion] = useState<boolean>(false)
     const spoilerControlRef = useRef<HTMLButtonElement>(null);
     return <>
         <Container
@@ -433,7 +432,6 @@ export const Summary2: React.FC = () => {
                             className={classes.viewMoreButton}
                             variant="light"
                             rightSection={<IconChevronsDown size={14} />}
-                            onClick={() => { setShowAccordion(true) }}
                         >
                             Xem thêm
                         </Button>
@@ -446,7 +444,6 @@ export const Summary2: React.FC = () => {
                             className={classes.viewMoreButton}
                             variant="light"
                             rightSection={<IconChevronsUp size={14} />}
-                            onClick={() => { setShowAccordion(true) }}
                         >
                             Ẩn bớt
                         </Button>
