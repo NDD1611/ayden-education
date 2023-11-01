@@ -1,3 +1,9 @@
+$mainStartColor: #106198;
+// $mainStartColor: #fff;
+$mainMiddleColor: #172860;
+$mainEndColor: #141123;
+$mainRadientToRight: linear-gradient(to right, $mainStartColor, $mainMiddleColor, $mainEndColor);
+// $mainRadientToRight: linear-gradient(to right, white, #5aadf0);
 // :root {
 //   --max-width: 1100px;
 //   --border-radius: 12px;

@@ -1,11 +1,18 @@
+@import '../../globals.scss';
+
 .header_Container {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  // background: #2339ff;        
-  background-image: linear-gradient(to right, #5cace8, #3586d1);
+  background-image: linear-gradient(to right, white, #5aadf0);
+  // background-image: $mainRadientToRight;
   z-index: 9;
+  border-bottom: 1px solid #ccc;
+
+  .Logo {
+    background-color: $mainRadientToRight;
+  }
 
   .button {
     display: flex;
@@ -16,14 +23,14 @@
     flex-shrink: 0;
     border-radius: 40px;
     background: #fff;
-    color: var(--Xanh, #2339ff);
+    color: #fff;
+    background-image: $mainRadientToRight;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 28px;
     border-radius: 4px;
-    border: 1px solid var(--base-base-white, #fff);
-    background: var(--base-base-white, #fff);
+    // background: var(--base-base-white, #fff);
     /* Shadow/xs */
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
   }

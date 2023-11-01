@@ -1,12 +1,14 @@
+@import '../../../globals.scss';
+
 .indicator {
-    background-color: #5cace8;
+    background-image: $mainRadientToRight;
     width: 20px;
     height: 10px;
     transition: width 250ms ease;
 
     &[data-active] {
         width: 40px;
-        background-color: #3586d1;
+        background-image: $mainRadientToRight;
     }
 }
 
@@ -21,7 +23,8 @@
     font-size: 20px;
     width: 40px;
     height: 40px;
-    background-image: linear-gradient(to right, #5cace8, #3586d1);
+    color: #fff;
+    background-image: $mainRadientToRight;
 
     &[data-inactive] {
         opacity: 0;
@@ -30,7 +33,7 @@
 }
 
 .title {
-    background-image: linear-gradient(to right, #5cace8, #3586d1);
+    background-image: $mainRadientToRight;
 }
 
 .scheduleTitle {
@@ -89,12 +92,6 @@
         align-items: center;
         left: -1.5%;
         top: calc(50% - 16px);
-
-        // .controlLeft {
-        //     width: 50px;
-        //     height: 50px;
-        //     background-color: linear-gradient(to right, #5cace8, #3586d1);
-        // }
     }
 
 }
@@ -126,6 +123,12 @@
         }
     }
 
+    .controls {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
     .controls {
         display: none;
     }

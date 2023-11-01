@@ -1,52 +1,40 @@
-import { Button, Container, Flex, rem, Text } from "@mantine/core";
+import { Container, Flex, Text, Box } from "@mantine/core";
 import classes from "./About.module.scss";
-import { useLingui } from "@lingui/react";
 
 export const About: React.FC = () => {
-  const { i18n } = useLingui();
-  return (
-    <>
-      <Container size="xl">
-        <Flex
-          id="about"
-          justify={"center"}
-          align={"center"}
-          direction={"column"}
-          gap={rem(24)}
-          className={classes.aboutContainer}
+  return <Container size="xxl"
+    className={classes.aboutContainer}>
+    <Container size={'xl'}
+      className={classes.aboutContent}
+    >
+      <Text className={classes.headTitle}>AYDEN - ĐÀO TẠO CHUYÊN GIA LẬP TRÌNH</Text>
+
+      <Flex
+        gap={20}
+        className={classes.middle}
+      >
+        <Box
+          component="div"
+          className={classes.left}
         >
-          <Button size="lg" className={classes.button}>
-            {i18n._("AYDEN COMPANY")}
-          </Button>
-          <Text
-            className={classes.text}
-            styles={{
-              root: {
-                color: `#344054`,
-              },
-            }}
-          >
-            {i18n._("Giới thiệu chung về chúng tôi")}
+          <Text className={classes.leftTitle}>Cung ứng nhân sự LẬP TRÌNH LÀNH NGHỀ <br /> cho Việt Nam & Thế giới</Text>
+          <Text className={classes.leftDescription}>
+            Đào tạo cho mọi đối tượng từ người trái ngành, người mới bắt đầu, sinh viên công nghệ thông tin đến các bạn đã có có nghề lập trình. Đào tạo ra những lập trình viên tài năng, phát huy tố chất, tư duy lập trình, có định hướng để trở thành những lập trình chuyên nghiệp.
+            Giáo trình được may đo và biên soạn dành riêng cho các bạn học lập trình.
           </Text>
-          <Text
-            w={{ base: rem(320), md: rem(1133) }}
-            ta={"center"}
-            className={classes.subText}
-            styles={{
-              root: {
-                color: `#667085`,
-              },
-            }}
+        </Box>
+        <Box
+          component="div"
+          className={classes.right}
+        >
+          <Box
+            component="div"
+            className={classes.slideImage}
           >
-            {i18n._(
-              "Với khung chương trình bám sát yêu cầu dự án thực tế, khi tham gia khóa học, các bạn sẽ được trang bị đầy đủ kiến thức từ cơ bản tới nâng cao để trở thành một Front-end Developer."
-            )}
-          </Text>
-          <Button className={classes.buttonMore} size="xl">
-            {i18n._("Xem thêm về chúng tôi")}
-          </Button>
-        </Flex>
-      </Container>
-    </>
-  );
+            <div className={classes.moverX}></div>
+          </Box>
+        </Box>
+      </Flex>
+    </Container>
+  </Container>
 };

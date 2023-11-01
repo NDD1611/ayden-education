@@ -1,5 +1,7 @@
 @use "../../../styles/mixins/button" as *;
+
 .homeContainer {
+  overflow: hidden;
   min-height: 1350px;
   height: 1350px;
   background: url("/assets/images/herobg.png"),
@@ -10,49 +12,60 @@
   background-position: top, bottom;
   background-repeat: no-repeat, no-repeat;
   padding-top: 182px;
+
   .button {
     @include make-button();
   }
+
   .title {
     font-size: 60px;
     font-weight: 700;
     line-height: 72px;
     letter-spacing: -1.2px;
   }
+
   .text {
     font-size: 48px;
     font-weight: 700;
     line-height: 60px;
     letter-spacing: -0.96px;
   }
+
   .imagesContainer {
     border-radius: 28px;
   }
 }
+
 .hideMobile {
   display: flex;
 }
+
 .hideDesktop {
   display: none;
 }
+
 @media only screen and (max-width: 48em) {
   .hideMobile {
     display: none;
   }
+
   .hideDesktop {
     display: block;
   }
+
   .homeContainer {
     min-height: 750px;
     height: 750px;
     background-size:
       550px 550px,
       contain;
+
     .title {
       font-size: 20px;
       line-height: 28px;
       letter-spacing: -1.2px;
     }
+
     .text {
       font-size: 18px;
       line-height: 24px;

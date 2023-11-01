@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
                 w={{ base: rem(80), md: rem(101) }}
                 h={{ base: rem(42), md: rem(56) }}
               >
-                <Image src={"/assets/icons/logolight.svg"} alt="logo" fill />
+                <Image className={classes.Logo} src={"/assets/icons/logolight.svg"} alt="logo" fill />
               </Box>
               <Box className={classes.hideMobile}>
                 <Navbar />

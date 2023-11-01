@@ -160,9 +160,9 @@ export const Recommend: React.FC = () => {
             },
           }}
         >
-          {i18n._(
+          {/* {i18n._(
             "Với khung chương trình bám sát yêu cầu dự án thực tế, khi tham gia khóa học, các bạn sẽ được trang bị đầy đủ kiến thức từ cơ bản tới nâng cao để trở thành một Front-end Developer."
-          )}
+          )} */}
         </Text>
         <SimpleGrid
           cols={{ base: 1, md: 2 }}

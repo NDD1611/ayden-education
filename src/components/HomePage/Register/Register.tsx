@@ -6,21 +6,36 @@ import {
   Grid,
   rem,
   Text,
-  TextInput,
+  TextInput, Group, NumberInput, Textarea
 } from "@mantine/core";
 import Image from "next/image";
 import { useLingui } from "@lingui/react";
 import classes from "./Register.module.scss";
+import { useForm, isNotEmpty, isEmail, isInRange, hasLength, matches } from '@mantine/form';
 export const Register: React.FC = () => {
   const { i18n } = useLingui();
+  const form = useForm({
+    initialValues: {
+      name: '',
+      email: '',
+      phone: '',
+    },
+
+    validate: {
+      name: hasLength({ min: 2, max: 10 }, 'Tên có độ dài từ 2 đến 10'),
+      email: isEmail('email không chính xác'),
+      phone: matches(/^#([0-9a-f]{3}){1,2}$/, 'số điện thoại không chính xác'),
+    },
+  });
   return (
     <>
       <Flex
         align={"center"}
         mih={rem(620)}
-        bg={"#2339FF"}
+        // bg={"#2339FF"}
         py={rem(50)}
         id="contact"
+        className={classes.contact}
       >
         <Container size={"xl"} w={"100%"}>
           <Grid columns={24}>
@@ -33,54 +48,56 @@ export const Register: React.FC = () => {
                 <Image src={"/assets/images/register.png"} alt="" fill />
               </Box>
             </Grid.Col>
+
             <Grid.Col span={{ base: 24, md: 12 }}>
-              <form>
-                <Box w={{ base: "100%", md: rem(535) }}>
+              <Flex
+                justify={'center'}
+              >
+                <Box
+                  component="form"
+                  maw={600}
+                  className={classes.form}
+                  w={{ base: '80%' }}
+                  onSubmit={form.onSubmit(() => { })}
+                >
                   <Text
                     className={classes.text}
-                    styles={{
-                      root: {
-                        color: `#fff`,
-                      },
-                    }}
                   >
-                    {i18n._("Đăng kí ngay")}
+                    {i18n._("GHI DANH")}
                   </Text>
-                  <Text
-                    mt={rem(12)}
-                    className={classes.subText}
-                    styles={{
-                      root: {
-                        color: `#fff`,
-                      },
-                    }}
+                  <TextInput label="Họ và tên" placeholder="Họ và tên" withAsterisk {...form.getInputProps('name')} />
+
+                  <TextInput
+                    label="Email"
+                    placeholder="Email"
+                    withAsterisk
+                    mt="md"
+                    {...form.getInputProps('email')}
+                  />
+                  <TextInput
+                    label="Số điện thoại"
+                    placeholder="Số điện thoại"
+                    withAsterisk
+                    mt="md"
+                    {...form.getInputProps('phone')}
+                  />
+                  <Textarea
+                    mt={rem(20)}
+                    classNames={classes}
+                    placeholder="Bạn cần tư vấn thêm về chương trình, vui lòng để lịa tin nhăn tại đây"
+                  />
+
+                  <Group
+                    justify="center"
+                    mt="xl"
                   >
-                    {i18n._(
-                      "A good design is not only aesthetically pleasing, but also functional. It should be able to solve the problem"
-                    )}
-                  </Text>
-                  <Flex direction={"column"} gap={rem(12)} mt={rem(12)}>
-                    <TextInput
-                      placeholder="Họ và tên"
-                      size="lg"
-                      radius={rem(8)}
-                    />
-                    <TextInput
-                      placeholder="Số điện thoại"
-                      size="lg"
-                      radius={rem(8)}
-                    />
-                    <TextInput
-                      placeholder="Địa chỉ email"
-                      size="lg"
-                      radius={rem(8)}
-                    />
-                    <Button size="xl" variant="white" color="#344054">
-                      Gửi ngay
-                    </Button>
-                  </Flex>
+                    <Button
+                      className={classes.registerButton}
+                      type="submit"
+                    >GHI DANH NGAY</Button>
+                  </Group>
                 </Box>
-              </form>
+              </Flex>
             </Grid.Col>
           </Grid>
         </Container>

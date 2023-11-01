@@ -82,28 +82,38 @@ export const Values: React.FC = () => {
                     },
                   }}
                 >
-                  <List.Item>
+                  <List.Item
+                    className={classes.listItem}
+                  >
                     {i18n._(
                       "Làm chủ HTML, CSS, JavaScript, thư viện Bootstrap, Jquery trong xây dựng giao diện web"
                     )}
                   </List.Item>
-                  <List.Item>
+                  <List.Item
+                    className={classes.listItem}
+                  >
                     {i18n._(
                       "Làm chủ thư viện ReactJS, các khái niệm từ cơ bản đến nâng cao"
                     )}
                   </List.Item>
-                  <List.Item>
+                  <List.Item
+                    className={classes.listItem}
+                  >
                     {i18n._(
                       "Tạo ra sản phẩm thực tế ngay trong khóa học, xây dựng projet phù hợp với yêu cầu doanh nghiệp"
                     )}
                   </List.Item>
 
-                  <List.Item>
+                  <List.Item
+                    className={classes.listItem}
+                  >
                     {i18n._(
                       "Hiểu về quy trình phát triển sản phẩm phần mềm khi làm việc trong doanh nghiệp"
                     )}
                   </List.Item>
-                  <List.Item>
+                  <List.Item
+                    className={classes.listItem}
+                  >
                     {i18n._(
                       "Sẵn sàng tham gia dự án ở vai trò lập trình viên Front-end với ReactJS"
                     )}

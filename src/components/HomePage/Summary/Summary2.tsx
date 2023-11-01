@@ -1,7 +1,7 @@
 
-import { Container, Accordion, rem, Text, Flex, List, ThemeIcon } from '@mantine/core'
-import { IconCircleCheck } from '@tabler/icons-react';
-import React from 'react'
+import { Container, Accordion, rem, Text, Flex, List, ThemeIcon, Button, Spoiler } from '@mantine/core'
+import { IconCircleCheck, IconChevronsDown, IconChevronsUp } from '@tabler/icons-react';
+import React, { useState, useRef } from 'react'
 import { useMemo } from 'react'
 import { useLingui } from "@lingui/react";
 import classes from './Summary2.module.scss'
@@ -380,7 +380,8 @@ export const Summary2: React.FC = () => {
                                         color="teal"
                                         size={24}
                                         // radius="xl"
-                                        gradient={{ from: '#5cace8', to: '#3586d1', deg: 90 }}>
+                                        gradient={{ from: '#106198', to: '#172860', deg: 90 }}
+                                    >
                                         <IconCircleCheck size="1rem" />
                                     </ThemeIcon>
                                 }
@@ -411,6 +412,8 @@ export const Summary2: React.FC = () => {
         )
     })
 
+    const [showAccordion, setShowAccordion] = useState<boolean>(false)
+    const spoilerControlRef = useRef<HTMLButtonElement>(null);
     return <>
         <Container
             size={'lg'}
@@ -420,9 +423,44 @@ export const Summary2: React.FC = () => {
             >
                 ĐỀ CƯƠNG CHI TIẾT
             </Text>
-            <Accordion variant="contained" transitionDuration={1000}>
-                {accordionItems}
-            </Accordion>
+
+            <Spoiler maxHeight={250}
+                classNames={classes}
+                showLabel={
+                    <Container className={classes.viewMore}>
+                        <Button
+                            ref={spoilerControlRef}
+                            className={classes.viewMoreButton}
+                            variant="light"
+                            rightSection={<IconChevronsDown size={14} />}
+                            onClick={() => { setShowAccordion(true) }}
+                        >
+                            Xem thêm
+                        </Button>
+                    </Container>
+                }
+                hideLabel={
+                    <Container className={classes.viewMore}>
+                        <Button
+                            ref={spoilerControlRef}
+                            className={classes.viewMoreButton}
+                            variant="light"
+                            rightSection={<IconChevronsUp size={14} />}
+                            onClick={() => { setShowAccordion(true) }}
+                        >
+                            Ẩn bớt
+                        </Button>
+                    </Container>
+                }
+                transitionDuration={1000}
+            >
+                <Accordion
+                    variant="contained"
+                    transitionDuration={1000}
+                >
+                    {accordionItems}
+                </Accordion>
+            </Spoiler>
         </Container>
     </>
 }

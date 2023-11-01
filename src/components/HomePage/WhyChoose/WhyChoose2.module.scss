@@ -1,0 +1,186 @@
+@import '../../../globals.scss';
+
+.whyChoosesContainer {
+
+    // background-image: linear-gradient(to right, white, #5aadf0);
+    // background-color: #f4f4f4;
+    .title {
+        color: '#344054';
+        font-weight: 600;
+        text-align: center;
+        padding: 50px 0;
+    }
+
+    .contentContainer {
+        display: flex;
+    }
+
+    .left {
+        position: relative;
+        width: 60%;
+        padding-top: 56.25%;
+
+        .background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .mainContainer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+
+            .mainItem {
+                position: absolute;
+                // top: calc(50% - 75px);
+                // left: calc(50% - 150px);
+                // width: 300px;
+                // height: 150px;
+                // border: 1px solid blue;
+                overflow: hidden;
+
+                .mainItem1 {
+                    width: 100%;
+                    height: 100%;
+                    // border: 1px solid red;
+                    transform: rotate(60deg);
+                    overflow: hidden;
+
+
+                    .mainItem2 {
+                        width: 100%;
+                        height: 100%;
+                        // border: 1px solid green;
+                        transform: rotate(-120deg);
+                        overflow: hidden;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: 600;
+                        color: #172860;
+                        background-color: #fff;
+
+                        &:hover {
+                            background: $mainRadientToRight;
+                            color: #fff;
+                        }
+
+                        &:hover .itemContent {
+                            // background: $mainRadientToRight;
+                            color: #fff;
+                            background: #fff;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+
+                        .imageMainItem {
+                            transform: rotate(60deg);
+                        }
+
+                        .itemContent {
+                            // background: -webkit-linear-gradient(#eee, #333);
+                            background: $mainRadientToRight;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            transform: rotate(60deg);
+                            color: #000;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                        }
+                    }
+
+                    .active {
+                        background: $mainRadientToRight;
+                        color: #fff;
+
+                        .itemContent {
+                            // background: $mainRadientToRight;
+                            color: #fff;
+                            background: #fff;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .controlButton {
+            background: $mainRadientToRight;
+            margin: 0 10px;
+            margin-bottom: 20px;
+        }
+
+        .slideTitle {
+            padding-top: 20px;
+            font-weight: 600;
+            font-size: 25px;
+        }
+    }
+}
+
+.controls {
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 920px) {
+    .whyChoosesContainer {
+        .title {
+            font-size: 30px;
+            color: '#344054';
+            font-weight: 600;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 100px;
+        }
+
+        .contentContainer {
+            display: flex;
+            flex-direction: column;
+
+            .left {
+                width: 100%;
+            }
+
+            .right {
+                width: 100%;
+
+                .slideTitle {
+                    padding-top: 10px;
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+
+                .slideDescription {
+                    font-size: 14px;
+                }
+            }
+
+            .textHexagon {
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -17,7 +17,7 @@ export const Schedule2 = () => {
 
     useEffect(() => {
         const windowResize = () => {
-            if (window.innerHeight < 760) {
+            if (window.innerWidth < 760) {
                 setSlideScroll(2)
             } else {
                 setSlideScroll(5)
@@ -279,16 +279,7 @@ export const Schedule2 = () => {
                 slidesToScroll={numSlideScroll}
             >
                 {roadMaps}
-
             </Carousel>
-            {/* <Box className={classes.myControls}>
-                <Box >
-                    <IconCaretLeft className={classes.controlLeft} />
-                </Box>
-                <Box>
-                    <IconCaretRight />
-                </Box>
-            </Box> */}
         </Container>
     )
 }
