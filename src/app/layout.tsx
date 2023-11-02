@@ -33,7 +33,7 @@ export default async function RootLayout({
   params: { lang: string };
 }) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ scrollBehavior: 'smooth' }}>
       <body className={`${inter.className}`} suppressHydrationWarning={true} >
         <Provider locale={params.lang}>{children}</Provider>
       </body>
