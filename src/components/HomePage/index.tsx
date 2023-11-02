@@ -5,18 +5,18 @@ import { InformationCourse } from "./InformationCourse/InformationCourse";
 import { WhyChoose2 } from "./WhyChoose/WhyChoose2";
 import { Values } from "./Values/Values";
 import { Schedule2 } from "./Schedule/Schudule2";
-import { Header } from "../Header/Header";
 import { About } from "./About/About";
 import { Recommend } from "./Recommend/Recommend";
 import { Technology } from "./Techology/Technology";
 import { Register } from "./Register/Register";
 import { Footer2 } from "./Footer/Footer2";
+import { MenuScroll } from "./MenuScroll/MenuScroll";
 
 export const HomePage: React.FC = () => {
   return (
     <>
-      <Header />
       <HeroSection />
+      <MenuScroll />
       <About />
       <WhyChoose2 />
       <InformationCourse />

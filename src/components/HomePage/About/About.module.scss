@@ -21,6 +21,7 @@
 
         .leftDescription {
           font-size: 16px;
+          font-family: 'Open Sans';
         }
       }
 
@@ -102,6 +103,7 @@
     }
 
     .headTitle {
+      color: $colorMainTitle;
       font-size: 48px;
       font-weight: 600;
       text-align: center;
@@ -144,7 +146,17 @@
         }
       }
 
+      .foot {
+        .item {
+          .mainText {
+            font-size: 20px;
+          }
 
+          .subText {
+            font-size: 15px;
+          }
+        }
+      }
     }
   }
 }

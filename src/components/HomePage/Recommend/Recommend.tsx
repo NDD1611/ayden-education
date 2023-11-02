@@ -129,7 +129,11 @@ export const Recommend: React.FC = () => {
   }, [dataRaw]);
 
   return (
-    <Container size={"xl"} py={rem(100)}>
+    <Container
+      id="feelOfStudent"
+      size={"xl"}
+      py={rem(100)}
+    >
       <Flex
         justify={"center"}
         align={"center"}
@@ -148,7 +152,7 @@ export const Recommend: React.FC = () => {
             },
           }}
         >
-          {i18n._("Học viên nói gì về chúng tôi")}
+          {i18n._("CẢM NHẬN HỌC VIÊN")}
         </Text>
         <Text
           w={{ base: rem(320), md: rem(1133) }}

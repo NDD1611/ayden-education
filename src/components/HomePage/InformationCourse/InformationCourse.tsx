@@ -14,7 +14,11 @@ export const InformationCourse: React.FC = () => {
   const { i18n } = useLingui();
   return (
     <>
-      <Container size={"xl"} py={{ base: rem(96) }}>
+      <Container
+        id="objectAndAdvantage"
+        size={"xl"}
+        py={{ base: rem(96) }}
+      >
         <SimpleGrid cols={{ span: 1, md: 2 }} spacing={rem(24)}>
           <Box className={classes.boxContainer}>
             <Text
@@ -77,7 +81,7 @@ export const InformationCourse: React.FC = () => {
                 },
               }}
             >
-              {i18n._("Ưu thế tuyển dụng")}
+              {i18n._("ƯU THẾ TUYỂN DỤNG")}
             </Text>
             <Box className={classes.boxList}>
               <List

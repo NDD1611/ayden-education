@@ -28,7 +28,7 @@ export const HeroSection: React.FC = () => {
               }}
               className={classes.title}
             >
-              {i18n._("Khóa học Front end thực chiến")}
+              {i18n._("KHÓA HỌC FRONT-END THỰC CHIẾN")}
             </Text>
             <Text
               className={classes.text}
@@ -38,7 +38,7 @@ export const HeroSection: React.FC = () => {
                 },
               }}
             >
-              {i18n._("Dành cho bất kì ai")}
+              {i18n._("DÀNH CHO BẤT KÌ AI")}
             </Text>
             <Box
               pos="relative"

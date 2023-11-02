@@ -33,8 +33,8 @@ export const Register: React.FC = () => {
         align={"center"}
         mih={rem(620)}
         // bg={"#2339FF"}
-        py={rem(50)}
-        id="contact"
+        py={rem(100)}
+        id="register"
         className={classes.contact}
       >
         <Container size={"xl"} w={"100%"}>

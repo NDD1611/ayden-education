@@ -2,8 +2,11 @@ import { Container, Flex, Text, Box } from "@mantine/core";
 import classes from "./About.module.scss";
 
 export const About: React.FC = () => {
-  return <Container size="xxl"
-    className={classes.aboutContainer}>
+  return <Container
+    id="aboutAyden"
+    size="xxl"
+    className={classes.aboutContainer}
+  >
     <Container size={'xl'}
       className={classes.aboutContent}
     >
@@ -53,7 +56,7 @@ export const About: React.FC = () => {
         </Box>
         <Box component="div" className={classes.item}>
           <Text className={classes.mainText}>92%</Text>
-          <Text className={classes.subText}>Có việc làm sau khóa học</Text>
+          <Text className={classes.subText}>Có việc làm</Text>
         </Box>
       </Flex>
     </Container>

@@ -5,10 +5,10 @@
     // background-image: linear-gradient(to right, white, #5aadf0);
     // background-color: #f4f4f4;
     .title {
-        color: '#344054';
+        color: $colorMainTitle;
         font-weight: 600;
         text-align: center;
-        padding: 50px 0;
+        padding-top: 50px;
     }
 
     .contentContainer {
@@ -79,7 +79,7 @@
                             // background: $mainRadientToRight;
                             color: #fff;
                             background: #fff;
-                            -webkit-background-clip: text;
+                            background-clip: text;
                             -webkit-text-fill-color: transparent;
                         }
 
@@ -90,7 +90,7 @@
                         .itemContent {
                             // background: -webkit-linear-gradient(#eee, #333);
                             background: $mainRadientToRight;
-                            -webkit-background-clip: text;
+                            background-clip: text;
                             -webkit-text-fill-color: transparent;
                             transform: rotate(60deg);
                             color: #000;
@@ -109,7 +109,7 @@
                             // background: $mainRadientToRight;
                             color: #fff;
                             background: #fff;
-                            -webkit-background-clip: text;
+                            background-clip: text;
                             -webkit-text-fill-color: transparent;
                         }
                     }
@@ -149,7 +149,7 @@
     .whyChoosesContainer {
         .title {
             font-size: 30px;
-            color: '#344054';
+            color: $colorMainTitle;
             font-weight: 600;
             text-align: center;
             padding-top: 50px;

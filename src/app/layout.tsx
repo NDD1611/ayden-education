@@ -5,6 +5,14 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Provider } from "@/provider";
 import { locales } from "@/i18n";
+// import { Mitr } from "next/font/google";
+// import { Baloo_2 } from "next/font/google";
+
+// const mitr = Mitr({
+//   weight: ['200', '300', '400', '500', '600', '700'],
+//   subsets: ['latin'],
+//   display: 'swap',
+// })
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +34,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className} suppressHydrationWarning={true} >
+      <body className={`${inter.className}`} suppressHydrationWarning={true} >
         <Provider locale={params.lang}>{children}</Provider>
       </body>
     </html>

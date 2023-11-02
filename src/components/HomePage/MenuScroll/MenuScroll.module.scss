@@ -1,0 +1,86 @@
+@import '../../../globals.scss';
+
+.menuScroll {
+    position: fixed;
+    left: 0;
+    top: 150px;
+    z-index: 99;
+
+    .menuBtn {
+        background-image: $mainRadientToRight;
+        padding: 5px 10px;
+    }
+
+    .menuList {
+        transition: height 0.5s linear;
+        overflow-y: hidden;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0px 0px 8px -2px #ccc;
+
+        .backgroundSection {
+            background-image: $mainRadientToRight;
+
+            .textItem {
+                color: #fff !important;
+                padding: 10px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                z-index: 9999;
+            }
+        }
+
+        .item {
+            position: relative;
+            height: 40px;
+            width: 200px;
+
+            .textItem {
+                color: #000;
+                padding: 10px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                z-index: 9999;
+            }
+
+            .backgroundItem {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 0;
+                z-index: 999;
+                transition: width 0.3s linear;
+                background-image: $mainRadientToRight;
+            }
+
+            &:hover .backgroundItem {
+                width: 100%;
+                transition: width 0.3s linear;
+            }
+
+            &:hover .textItem {
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .menuScroll {
+        left: calc(100% - 220px);
+        top: 80px;
+
+        .containerBtn {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

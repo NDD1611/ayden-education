@@ -458,6 +458,7 @@ export const Summary2: React.FC = () => {
     return <>
         <Container
             size={'lg'}
+            id='details'
         >
             <Text
                 className={classes.headTitle}

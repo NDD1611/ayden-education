@@ -153,13 +153,13 @@ export const WhyChoose2: React.FC = () => {
         <Container
             size={'xl'}
             className={classes.whyChoosesContainer}
-            id="WhyChoose2"
+            id="WhyChoose"
         >
             <Text
                 size={rem(48)}
                 className={classes.title}
             >
-                Lý do nên lựa chọn chúng tôi
+                LÝ DO NÊN LỰA CHỌN CHÚNG TÔI
             </Text>
             <Box
                 component="div"

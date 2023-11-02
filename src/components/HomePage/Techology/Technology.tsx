@@ -7,7 +7,11 @@ export const Technology: React.FC = () => {
   const { i18n } = useLingui();
   return (
     <>
-      <Container size={"xl"} py={rem(50)}>
+      <Container
+        id="useTech"
+        size={"xl"}
+        py={rem(50)}
+      >
         <Flex
           direction={"column"}
           w={"100%"}
@@ -26,7 +30,7 @@ export const Technology: React.FC = () => {
               },
             }}
           >
-            {i18n._("Công nghệ sử dụng")}
+            {i18n._("CÔNG NGHỆ SỬ DỤNG")}
           </Text>
           <Flex justify={"center"} gap={rem(13)} wrap={"wrap"}>
             <Flex

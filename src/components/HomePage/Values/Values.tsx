@@ -18,7 +18,10 @@ export const Values: React.FC = () => {
   const { i18n } = useLingui();
   return (
     <>
-      <Container size={"xl"} py={rem(50)}>
+      <Container
+        id="valueReceive"
+        size={"xl"}
+        py={rem(50)}>
         <Flex justify={"space-between"}>
           <Grid columns={24}>
             <Grid.Col span={{ base: 24, md: 8 }}>
@@ -34,7 +37,7 @@ export const Values: React.FC = () => {
                     },
                   }}
                 >
-                  {i18n._("Giá trị học viên nhận được sau khi học")}
+                  {i18n._("GIÁ TRỊ HỌC VIÊN NHẬN ĐƯỢC")}
                 </Text>
                 <Text
                   className={classes.subText}
