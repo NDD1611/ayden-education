@@ -88,11 +88,12 @@ export function Header2() {
     ));
 
     return (
-        <Box className={classes.myHeader}>
+        <Box>
             <header className={classes.header}>
                 <Group
                     justify="space-between"
                     h="100%"
+                    px={{ sm: rem(100), base: rem(20) }}
                 >
                     <Box
                         pos={'relative'}
@@ -133,20 +134,6 @@ export function Header2() {
                                 <SimpleGrid cols={2} spacing={0}>
                                     {links}
                                 </SimpleGrid>
-
-                                {/* <div className={classes.dropdownFooter}>
-                                    <Group justify="space-between">
-                                        <div>
-                                            <Text fw={500} fz="sm">
-                                                Get started
-                                            </Text>
-                                            <Text size="xs" c="dimmed">
-                                                Their food sources have decreased, and their numbers
-                                            </Text>
-                                        </div>
-                                        <Button variant="default">Get started</Button>
-                                    </Group>
-                                </div> */}
                             </HoverCard.Dropdown>
                         </HoverCard>
                         <a href="#" className={classes.link}>
@@ -157,7 +144,7 @@ export function Header2() {
                         </a>
                     </Group>
 
-                    <Group visibleFrom="sm">
+                    <Group visibleFrom="md">
                         <Button
                             classNames={styles}
                         >
@@ -176,9 +163,9 @@ export function Header2() {
                 opened={drawerOpened}
                 onClose={closeDrawer}
                 size="100%"
-                padding="md"
+                padding="lg"
                 title="Menu"
-                hiddenFrom="sm"
+                hiddenFrom="md"
                 zIndex={1000000}
             >
                 <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
