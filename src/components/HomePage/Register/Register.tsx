@@ -84,7 +84,7 @@ export const Register: React.FC = () => {
                   <Textarea
                     mt={rem(20)}
                     classNames={classes}
-                    placeholder="Bạn cần tư vấn thêm về chương trình, vui lòng để lịa tin nhăn tại đây"
+                    placeholder="Bạn cần tư vấn thêm về chương trình, vui lòng để lại tin nhắn tại đây"
                   />
 
                   <Group
