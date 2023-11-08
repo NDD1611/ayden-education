@@ -1,15 +1,23 @@
-.header {
+
+.containerHeader{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    background: #fff;
     z-index: 999;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    width: 100vw;
+    display:flex;
+    justify-content: center;
+}
+
+.header {
+    width: 100%;
+    max-width: 1288px;
     height: 80px;
     padding-left: var(--mantine-spacing-md);
     padding-right: var(--mantine-spacing-md);
     border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
-    border-bottom: 1px solid #ccc;
 }
 
 .link {

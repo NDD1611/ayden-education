@@ -1,7 +1,6 @@
 import {
     HoverCard,
     Group,
-    Button,
     UnstyledButton,
     Text,
     SimpleGrid,
@@ -16,7 +15,6 @@ import {
     rem,
     useMantineTheme,
 } from '@mantine/core';
-// import { MantineLogo } from '@mantine/ds';
 import { useDisclosure } from '@mantine/hooks';
 import {
     IconNotification,
@@ -28,7 +26,6 @@ import {
     IconChevronDown,
 } from '@tabler/icons-react';
 import classes from './Header2.module.css';
-import styles from './Header2.module.scss';
 import Image from 'next/image';
 
 const mockdata = [
@@ -88,10 +85,10 @@ export function Header2() {
     ));
 
     return (
-        <Box>
+        <Box className={classes.containerHeader}>
             <header className={classes.header}>
                 <Group
-                    justify="space-between"
+                    justify='space-between'
                     h="100%"
                     px={{ sm: rem(100), base: rem(20) }}
                 >
@@ -144,7 +141,7 @@ export function Header2() {
                         </a>
                     </Group>
 
-                    <Group visibleFrom="md">
+                    {/* <Group visibleFrom="md">
                         <Button
                             classNames={styles}
                         >
@@ -153,7 +150,7 @@ export function Header2() {
                         <Button
                             classNames={styles}
                         >Đăng nhập</Button>
-                    </Group>
+                    </Group> */}
 
                     <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
                 </Group>
@@ -177,7 +174,7 @@ export function Header2() {
                     <UnstyledButton className={classes.link} onClick={toggleLinks}>
                         <Center inline>
                             <Box component="span" mr={5}>
-                                KHÁO HỌC
+                                KHÓA HỌC
                             </Box>
                             <IconChevronDown
                                 style={{ width: rem(16), height: rem(16) }}
@@ -195,14 +192,14 @@ export function Header2() {
 
                     <Divider my="sm" />
 
-                    <Group justify="center" grow pb="xl" px="md">
+                    {/* <Group justify="center" grow pb="xl" px="md">
                         <Button
                             classNames={styles}
                         >Liên hệ đăng kí</Button>
                         <Button
                             classNames={styles}
                         >Đăng nhập</Button>
-                    </Group>
+                    </Group> */}
                 </ScrollArea>
             </Drawer>
         </Box >
