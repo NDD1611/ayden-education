@@ -11,10 +11,12 @@ import { Technology } from "./Techology/Technology";
 import { Register } from "./Register/Register";
 import { Footer2 } from "./Footer/Footer2";
 import { MenuScroll } from "./MenuScroll/MenuScroll";
+import { Header2 } from "../Header/Header2";
 
 export const HomePage: React.FC = () => {
   return (
     <>
+      <Header2 />
       <HeroSection />
       <MenuScroll />
       <About />

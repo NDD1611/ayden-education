@@ -22,6 +22,7 @@
     "@lingui/react": "^4.5.0",
     "@mantine/carousel": "^7.1.0",
     "@mantine/core": "^7.1.0",
+    "@mantine/ds": "^7.2.1",
     "@mantine/form": "^7.1.0",
     "@mantine/hooks": "^7.1.0",
     "@mantine/next": "^6.0.21",
