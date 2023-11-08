@@ -1,4 +1,4 @@
-import { Container, Flex, Text, Box } from "@mantine/core";
+import { Container, Flex, Text, Box, Button, rem } from "@mantine/core";
 import classes from "./About.module.scss";
 
 export const About: React.FC = () => {
@@ -25,6 +25,19 @@ export const About: React.FC = () => {
             Đào tạo cho mọi đối tượng từ người trái ngành, người mới bắt đầu, sinh viên công nghệ thông tin đến các bạn đã có có nghề lập trình. Đào tạo ra những lập trình viên tài năng, phát huy tố chất, tư duy lập trình, có định hướng để trở thành những lập trình chuyên nghiệp.
             Giáo trình được may đo và biên soạn dành riêng cho các bạn học lập trình.
           </Text>
+          <Flex
+            w={'100%'}
+            justify={'center'}
+          >
+            <a href="#register">
+              <Button
+                my={rem(20)}
+                className={classes.registerNow}
+              >
+                Đăng kí ngay
+              </Button>
+            </a>
+          </Flex>
         </Box>
         <Box
           component="div"

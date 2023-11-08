@@ -3,13 +3,19 @@ import {
     Box,
     Text,
     Container,
-    Button
+    // Button
 } from "@mantine/core";
 import { Carousel } from '@mantine/carousel';
 import classes from "./WhyChoose2.module.scss";
 import Image from "next/image";
-import { IconChevronsLeft, IconChevronsRight, IconBell, IconDeviceDesktopAnalytics, IconFileDescription, IconHeartHandshake, IconMessages, IconUser } from '@tabler/icons-react';
-import React, { useEffect, useState, useRef, useCallback } from "react";
+import {
+    //  IconChevronsLeft, IconChevronsRight, 
+    IconBell, IconDeviceDesktopAnalytics, IconFileDescription, IconHeartHandshake, IconMessages, IconUser
+} from '@tabler/icons-react';
+import React, {
+    useEffect, useState, useRef,
+    //  useCallback 
+} from "react";
 export const WhyChoose2: React.FC = () => {
     const [widthMainItem, setWidthMainItem] = useState<number>(300)
     const [heightMainItem, setHeightMainItem] = useState<number>(150) // height = width / 2
@@ -115,34 +121,49 @@ export const WhyChoose2: React.FC = () => {
             setWidthIcon(30)
         }
     }
+
     useEffect(() => {
         setPositionForItem()
         caculatorSizeItem()
-        window.addEventListener('resize', setPositionForItem)
-        window.addEventListener('resize', caculatorSizeItem)
+        // window.addEventListener('resize', setPositionForItem)
+        // window.addEventListener('resize', caculatorSizeItem)
         setSpace(20)
         return () => {
-            window.removeEventListener('resize', setPositionForItem)
-            window.removeEventListener('resize', caculatorSizeItem)
+            // window.removeEventListener('resize', setPositionForItem)
+            // window.removeEventListener('resize', caculatorSizeItem)
         }
     }, [])
     useEffect(() => {
         setPositionForItem()
     })
-    const handleNextSlide = useCallback(() => {
-        if (nextRef.current) {
-            nextRef.current.click();
-        }
-    }, [nextRef]);
-    const handlePreSlide = useCallback(() => {
-        if (prevRef.current) {
-            prevRef.current.click();
-        }
-    }, [prevRef]);
+    // const handleNextSlide = useCallback(() => {
+    //     if (nextRef.current) {
+    //         nextRef.current.click();
+    //     }
+    // }, [nextRef]);
+    // const handlePreSlide = useCallback(() => {
+    //     if (prevRef.current) {
+    //         prevRef.current.click();
+    //     }
+    // }, [prevRef]);
     const handleSlideChange = (index: number) => {
-        // console.log(index)
         setSlideCurrentId('item' + index)
     }
+
+    const handleClickSixItem = (num: number) => {
+        let carousel = document.getElementById('carouselJS')
+        let widthSlide: number = 0;
+        if (carousel) {
+            widthSlide = carousel.clientWidth
+        }
+        let carouselMain: HTMLDivElement | null = document.querySelector('#carouselJS .mantine-Carousel-container')
+        if (carouselMain) {
+            carouselMain.style.transition = 'transform 0.3s linear'
+            carouselMain.style.transform = `translate3d(${-(num * widthSlide)}px, 0px, 0px)`
+        }
+        setSlideCurrentId('item' + num)
+    }
+
     return <Container
         size={'xxl'}
         style={{
@@ -193,7 +214,7 @@ export const WhyChoose2: React.FC = () => {
                         </div>
                     </div>
                     <div id="mainContainer" className={classes.mainContainer}>
-                        <div id="item0" className={classes.mainItem}>
+                        <div id="item0" className={classes.mainItem} onClick={() => { handleClickSixItem(0) }}>
                             <div className={classes.mainItem1}>
                                 <div className={`${classes.mainItem2} ${slideCurrentId == 'item0' && classes.active}`}>
                                     <div className={classes.itemContent} >
@@ -205,7 +226,7 @@ export const WhyChoose2: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div id="item1" className={classes.mainItem}>
+                        <div id="item1" className={classes.mainItem} onClick={() => { handleClickSixItem(1) }}>
                             <div className={classes.mainItem1}>
                                 <div className={`${classes.mainItem2} ${slideCurrentId == 'item1' && classes.active}`}>
                                     <div className={classes.itemContent} >
@@ -217,7 +238,7 @@ export const WhyChoose2: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div id="item2" className={classes.mainItem} >
+                        <div id="item2" className={classes.mainItem} onClick={() => { handleClickSixItem(2) }}>
                             <div className={classes.mainItem1}>
                                 <div className={`${classes.mainItem2} ${slideCurrentId == 'item2' && classes.active}`}>
                                     <div className={classes.itemContent}>
@@ -229,7 +250,7 @@ export const WhyChoose2: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div id="item3" className={classes.mainItem}>
+                        <div id="item3" className={classes.mainItem} onClick={() => { handleClickSixItem(3) }}>
                             <div className={classes.mainItem1}>
                                 <div className={`${classes.mainItem2} ${slideCurrentId == 'item3' && classes.active}`}>
                                     <div className={classes.itemContent}>
@@ -241,7 +262,7 @@ export const WhyChoose2: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div id="item4" className={classes.mainItem}>
+                        <div id="item4" className={classes.mainItem} onClick={() => { handleClickSixItem(4) }}>
                             <div className={classes.mainItem1}>
                                 <div className={`${classes.mainItem2} ${slideCurrentId == 'item4' && classes.active}`}>
                                     <div className={classes.itemContent}>
@@ -253,7 +274,7 @@ export const WhyChoose2: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div id="item5" className={classes.mainItem}>
+                        <div id="item5" className={classes.mainItem} onClick={() => { handleClickSixItem(5) }}>
                             <div className={classes.mainItem1}>
                                 <div className={`${classes.mainItem2} ${slideCurrentId == 'item5' && classes.active}`}>
                                     <div className={classes.itemContent}>
@@ -274,6 +295,7 @@ export const WhyChoose2: React.FC = () => {
                     pt={50}
                 >
                     <Carousel
+                        id="carouselJS"
                         w={'80%'}
                         // height={180}
                         pt={40}
@@ -285,7 +307,6 @@ export const WhyChoose2: React.FC = () => {
                         onSlideChange={handleSlideChange}
                         // withIndicators
                         loop
-
                     >
                         <Carousel.Slide>
                             <Text
@@ -294,7 +315,7 @@ export const WhyChoose2: React.FC = () => {
                             <Box component="p" className={classes.slideDescription}>Ayden sử dụng hệ thống video trực tuyến và hệ thống LMS ( Learning Management System) hiện đại để hỗ trợ học tập cho các khóa học.
                             </Box>
                         </Carousel.Slide>
-                        <Carousel.Slide>
+                        <Carousel.Slide >
                             <Text
                                 className={classes.slideTitle}
                             >Giảng viên - Mentor hỗ trợ</Text>
@@ -337,7 +358,7 @@ export const WhyChoose2: React.FC = () => {
                         </Carousel.Slide>
                     </Carousel>
 
-                    <Box component="div">
+                    {/* <Box component="div">
                         <Button
                             className={classes.controlButton}
                             onClick={handlePreSlide}
@@ -350,7 +371,7 @@ export const WhyChoose2: React.FC = () => {
                         >
                             <IconChevronsRight />
                         </Button>
-                    </Box>
+                    </Box> */}
                 </Box>
             </Box>
 

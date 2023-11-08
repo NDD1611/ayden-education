@@ -1,5 +1,5 @@
 
-import { Button, Container } from '@mantine/core';
+import { Box, Button, Container } from '@mantine/core';
 import classes from './MenuScroll.module.scss'
 import { IconMenu2, IconX } from '@tabler/icons-react';
 import React, { useEffect, useMemo, useState } from 'react';
@@ -109,12 +109,38 @@ export const MenuScroll = () => {
                 <Button
                     className={classes.menuBtn}
                     size={'sm'}
+                    visibleFrom='sm'
                     onClick={toggle}
                     aria-label="Toggle navigation"
                 >
                     {!opened && <IconMenu2 />}
                     {opened && <IconX />}
                 </Button>
+                <Box
+                    component='div'
+                    style={{
+                        border: '1px solid #ccc',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        borderRadius: '50%',
+                        backgroundColor: '#ccc'
+                    }}
+                    hiddenFrom='sm'
+                    w={50}
+                    h={50}
+                >
+                    <Button
+                        className={classes.menuBtnCircle}
+                        size={'sm'}
+                        hiddenFrom='sm'
+                        onClick={toggle}
+                        aria-label="Toggle navigation"
+                        w={40}
+                        h={40}
+                    >
+                    </Button>
+                </Box>
             </div>
             <div id='menuList' className={classes.menuList}>
                 {links}

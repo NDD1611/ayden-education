@@ -11,6 +11,11 @@
         padding: 5px 10px;
     }
 
+    .menuBtnCircle {
+        border-radius: 50%;
+        background-image: $mainRadientToRight;
+    }
+
     .menuList {
         transition: height 0.5s linear;
         overflow-y: hidden;
@@ -76,7 +81,7 @@
 @media only screen and (max-width: 500px) {
     .menuScroll {
         left: calc(100% - 220px);
-        top: 80px;
+        top: 200px;
 
         .containerBtn {
             display: flex;

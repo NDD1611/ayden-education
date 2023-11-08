@@ -100,7 +100,7 @@ export function Header2() {
                     </Box>
 
                     <Group h="100%" gap={0} visibleFrom="sm">
-                        <a href="#" className={classes.link}>
+                        <a href="https://ayden.company/" target='_blank' className={classes.link}>
                             TRANG CHỦ
                         </a>
                         <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
@@ -168,7 +168,7 @@ export function Header2() {
                 <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
                     <Divider my="sm" />
 
-                    <a href="#" className={classes.link}>
+                    <a href="https://ayden.company/" target='_blank' className={classes.link}>
                         TRANG CHỦ
                     </a>
                     <UnstyledButton className={classes.link} onClick={toggleLinks}>
