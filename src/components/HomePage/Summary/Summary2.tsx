@@ -459,6 +459,7 @@ export const Summary2: React.FC = () => {
         <Container
             size={'lg'}
             id='details'
+            pt={rem(90)}
         >
             <Text
                 className={classes.headTitle}
