@@ -46,7 +46,7 @@ export const HeroSection: React.FC = () => {
               h={{ base: rem(223), md: rem(553) }}
               className={classes.imagesContainer}
             >
-              <Image src={"/assets/images/heroimg.png"} alt="" fill />
+              <Image sizes="xxl" src={"/assets/images/heroimg.png"} alt="" fill />
               <Flex
                 pos={"absolute"}
                 justify={"center"}
@@ -58,10 +58,10 @@ export const HeroSection: React.FC = () => {
                 className={classes.hideMobile}
               >
                 <Box pos={"relative"} w={rem(197)} h={rem(173)}>
-                  <Image src={"/assets/images/left1.png"} alt="" fill />
+                  <Image sizes="xxl" src={"/assets/images/left1.png"} alt="" fill />
                 </Box>
                 <Box pos={"relative"} w={rem(308)} h={rem(235)}>
-                  <Image src={"/assets/images/left2.png"} alt="" fill />
+                  <Image sizes="xxl" src={"/assets/images/left2.png"} alt="" fill />
                 </Box>
               </Flex>
               <Flex
@@ -75,10 +75,10 @@ export const HeroSection: React.FC = () => {
                 className={classes.hideMobile}
               >
                 <Box pos={"relative"} w={rem(234)} h={rem(164)}>
-                  <Image src={"/assets/images/right1.png"} alt="" fill />
+                  <Image sizes="xxl" src={"/assets/images/right1.png"} alt="" fill />
                 </Box>
                 <Box pos={"relative"} w={rem(194)} h={rem(212)}>
-                  <Image src={"/assets/images/right2.png"} alt="" fill />
+                  <Image sizes="xxl" src={"/assets/images/right2.png"} alt="" fill />
                 </Box>
               </Flex>
             </Box>

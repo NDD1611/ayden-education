@@ -39,7 +39,7 @@ export const Technology: React.FC = () => {
               pos={"relative"}
               className={classes.item}
             >
-              <Image src={"/assets/icons/php.png"} alt="" fill />
+              <Image sizes="xxl" src={"/assets/icons/php.png"} alt="" fill />
             </Flex>
             <Flex
               justify={"center"}
@@ -73,7 +73,7 @@ export const Technology: React.FC = () => {
               pos={"relative"}
               className={classes.item}
             >
-              <Image src={"/assets/icons/mariadb.png"} alt="" fill />
+              <Image sizes="xxl" src={"/assets/icons/mariadb.png"} alt="" fill />
             </Flex>
             <Flex
               justify={"center"}
@@ -81,7 +81,7 @@ export const Technology: React.FC = () => {
               pos={"relative"}
               className={classes.item}
             >
-              <Image src={"/assets/icons/py.png"} alt="" fill />
+              <Image sizes="xxl" src={"/assets/icons/py.png"} alt="" fill />
             </Flex>
             <Flex
               justify={"center"}
@@ -89,7 +89,7 @@ export const Technology: React.FC = () => {
               pos={"relative"}
               className={classes.item}
             >
-              <Image src={"/assets/icons/ts.png"} alt="" fill />
+              <Image sizes="xxl" src={"/assets/icons/ts.png"} alt="" fill />
             </Flex>
             <Flex
               justify={"center"}
@@ -97,7 +97,7 @@ export const Technology: React.FC = () => {
               pos={"relative"}
               className={classes.item}
             >
-              <Image src={"/assets/icons/js.png"} alt="" fill />
+              <Image sizes="xxl" src={"/assets/icons/js.png"} alt="" fill />
             </Flex>
             <Flex
               justify={"center"}
@@ -105,7 +105,7 @@ export const Technology: React.FC = () => {
               pos={"relative"}
               className={classes.item}
             >
-              <Image src={"/assets/icons/yi.png"} alt="" fill />
+              <Image sizes="xxl" src={"/assets/icons/yi.png"} alt="" fill />
             </Flex>
           </Flex>
         </Flex>

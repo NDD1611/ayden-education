@@ -107,7 +107,6 @@ export const WhyChoose2: React.FC = () => {
     const caculatorSizeItem = () => {
         let mainContainer = document.getElementById('mainContainer') as HTMLDivElement | null;
         if (mainContainer != null && window.innerWidth < 750) {
-            console.log(mainContainer.clientWidth)
             setWidthMainItem(220)
             setHeightMainItem(110)
             setWidthItem(176)

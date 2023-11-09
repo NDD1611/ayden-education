@@ -66,7 +66,7 @@ export const Recommend: React.FC = () => {
                   h={rem(88)}
                   className={classes.cardImg}
                 >
-                  <Image src={item.avatar} alt="" fill />
+                  <Image sizes="xxl" src={item.avatar} alt="" fill />
                 </Box>
                 <Box>
                   <Text

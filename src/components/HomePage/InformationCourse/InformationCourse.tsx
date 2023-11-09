@@ -44,7 +44,7 @@ export const InformationCourse: React.FC = () => {
                     radius="xl"
                     pos={"relative"}
                   >
-                    <Image src={"/assets/icons/bullet.svg"} alt="" fill />
+                    <Image sizes="xxl" src={"/assets/icons/bullet.svg"} alt="" fill />
                   </ThemeIcon>
                 }
                 styles={{
@@ -102,7 +102,7 @@ export const InformationCourse: React.FC = () => {
                     radius="xl"
                     pos={"relative"}
                   >
-                    <Image src={"/assets/icons/bullet.svg"} alt="" fill />
+                    <Image sizes="xxl" src={"/assets/icons/bullet.svg"} alt="" fill />
                   </ThemeIcon>
                 }
               >
