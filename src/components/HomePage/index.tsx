@@ -16,6 +16,7 @@ import { Header2 } from "../Header/Header2";
 export const HomePage: React.FC = () => {
   return (
     <>
+      {/* test git */}
       <Header2 />
       <HeroSection />
       <MenuScroll />
