@@ -34,7 +34,9 @@ export const Register: React.FC = () => {
   });
 
   // const submitForm = (values: any, event: any) => {
-  const submitForm = async (event: any) => {
+  const submitForm = async (
+    // event: any
+  ) => {
     console.log(form.values)
     let formData = new FormData()
     formData.append('name', form.values.name)
@@ -119,7 +121,8 @@ export const Register: React.FC = () => {
                       _event
                     ) => {
                       // submitForm(values, _event);
-                      submitForm(_event);
+                      // submitForm(_event);
+                      submitForm();
                     }
                   )}
                 >
