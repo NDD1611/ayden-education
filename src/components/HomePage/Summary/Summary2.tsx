@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 
 import { Container, Accordion, rem, Text, Flex, List, ThemeIcon, Box, Button } from '@mantine/core'
 import { IconCircleCheck, IconChevronsDown, IconChevronsUp } from '@tabler/icons-react';
@@ -406,7 +407,6 @@ export const Summary2: React.FC = () => {
                                 />
                             </div>
                         </Container>
-
                     </Flex>
                 </Accordion.Panel>
             </Accordion.Item>
@@ -429,7 +429,7 @@ export const Summary2: React.FC = () => {
         let hideBtn = document.getElementById('hideBtn')
         let showBtn = document.getElementById('showBtn')
         if (spoiler && showBtn && hideBtn) {
-            spoiler.style.height = 250 + 'px'
+            spoiler.style.height = 500 + 'px'
             showBtn.style.display = 'block'
             hideBtn.style.display = 'none'
         }
@@ -476,6 +476,7 @@ export const Summary2: React.FC = () => {
                     onChange={handleChangeAccordion}
                     variant="contained"
                     transitionDuration={300}
+                    defaultValue={'phase1'}
                 >
                     {accordionItems}
                 </Accordion>

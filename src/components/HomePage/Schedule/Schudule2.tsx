@@ -47,23 +47,22 @@ export const Schedule2 = () => {
             title: 'HTML5-CSS3',
             image: '/assets/schedules/HTML5-CSS3.jpg',
             descriptions: [
-                'UI-UX',
-                'HTML, CSS',
                 'Phân tích bố cục',
-                'Công cụ lập trình',
-                'Dự án web coffee',
-                'Dự án web Camping',
+                'HTML5-CSS3',
+                'Landing Page',
+                'Hiệu ứng với Animation',
+                'Flexbox, Grid',
                 'Công cụ lập trình'
             ]
         }, {
             title: 'BOOTSTRAP',
             image: '/assets/schedules/bs.jpg',
             descriptions: [
-                'UI-UX',
-                'HTML, CSS',
-                'Phân tích bố cục',
-                'Công cụ lập trình',
-                'Phương pháp học',
+                'Bootstrap',
+                'Responsive website',
+                'Media Query',
+                'Mobile First',
+                'Desktop First',
                 'Dự án web coffee',
                 'Dự án web Camping'
             ]

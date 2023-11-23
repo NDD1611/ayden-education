@@ -2,7 +2,7 @@ import { i18n } from '@lingui/core'
 
 export const locales = ['en', 'vi']
 export const defaultLocale = 'en'
-import en from "../locales/en.json"
+import en from '../locales/en.json'
 import vi from "../locales/vi.json"
 export const languages: Record<string, string>[] = [
   {
@@ -22,7 +22,7 @@ export async function dynamicActivate(locale: string) {
   // i18n.load(locale, messages)
   if (locale == 'vi') {
     i18n.load(locale, vi)
-  }else{
+  } else {
     i18n.load(locale, en)
   }
   i18n.activate(locale)
